@@ -1,0 +1,14 @@
+.h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-section {
+    flex-grow: 1;
+  }

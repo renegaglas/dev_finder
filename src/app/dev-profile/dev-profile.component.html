@@ -1,0 +1,36 @@
+<div class="profile-card">
+    <div class="profile-header">
+      <div class="profile-image"></div>
+      <div class="profile-info">
+        <h2>{{userProfile?.name}}</h2>
+        <p>{{userProfile?.login}}</p>
+      </div>
+    </div>
+    <div class="profile-stats">
+      <div>
+        <h3>{{userProfile?.public_repos}}</h3>
+        <p>Repos</p>
+      </div>
+      <div>
+        <h3>{{userProfile?.followers}}</h3>
+        <p>Followers</p>
+      </div>
+      <div>
+        <h3>{{userProfile?.following}}</h3>
+        <p>Following</p>
+      </div>
+    </div>
+    <div class="container">
+        <div class="profile-details">
+        <p>{{userProfile?.twitter_username}}</p>
+        <p>{{userProfile?.company}}</p>
+        <p>{{userProfile?.blog}}</p>
+        <p>{{userProfile?.location}}</p>
+        </div>
+        <div class="profile-bio">
+        <h4>Biography</h4>
+        <p>{{userProfile?.bio}}</p>
+        </div>
+    </div>
+    <p class="profile-join-date">Joined on {{userProfile?.created_at}}{{userProfile?.created_at?.toDateString}}</p>
+  </div>
