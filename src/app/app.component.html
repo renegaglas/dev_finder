@@ -1,9 +1,12 @@
 <div class="container">
     <div class="search-section">
-      <h1>Dev Finder</h1>
-        <app-dev-search (devNameChange)="getUserProfile($event)"></app-dev-search>
+      <h1>Dev<br>Finder</h1>
+      <app-dev-search (devNameChange)="getUserProfile($event)"></app-dev-search>
     </div>
-    <div class="profile-section">
+    @if (userProfile)
+    {
+      <div class="profile-section">
         <app-dev-profile [userProfile]="userProfile"></app-dev-profile>
-    </div>
-  </div>
+      </div>
+    }
+</div>

@@ -26,7 +26,7 @@ export class AppComponent {
     this.githubService.getUserProfile(username).subscribe(
       data => {
         console.log(data);
-        this.userProfile = data;
+        this.userProfile = new UserProfile(data);
       },
       error => {
         console.error('Error fetching profile', error);

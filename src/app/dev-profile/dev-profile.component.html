@@ -1,36 +1,39 @@
 <div class="profile-card">
-    <div class="profile-header">
-      <div class="profile-image"></div>
-      <div class="profile-info">
-        <h2>{{userProfile?.name}}</h2>
-        <p>{{userProfile?.login}}</p>
-      </div>
-    </div>
-    <div class="profile-stats">
-      <div>
-        <h3>{{userProfile?.public_repos}}</h3>
-        <p>Repos</p>
-      </div>
-      <div>
-        <h3>{{userProfile?.followers}}</h3>
-        <p>Followers</p>
-      </div>
-      <div>
-        <h3>{{userProfile?.following}}</h3>
-        <p>Following</p>
-      </div>
-    </div>
     <div class="container">
+      <div class="profile-header">
+        <img src="{{userProfile?.avatar_url}}" alt="avatar_url" class="profile-image">
+        <div class="profile-info">
+          <h2>{{userProfile?.name}}</h2>
+          <p>{{userProfile?.login}}</p>
+        </div>
         <div class="profile-details">
-        <p>{{userProfile?.twitter_username}}</p>
-        <p>{{userProfile?.company}}</p>
-        <p>{{userProfile?.blog}}</p>
-        <p>{{userProfile?.location}}</p>
+          <div class="icon-text-container"><mat-icon>account_box</mat-icon><span>{{userProfile?.twitter_username}}</span></div>
+          <div class="icon-text-container"><mat-icon>work</mat-icon><span>{{userProfile?.company}}</span></div>
+          <div class="icon-text-container"><mat-icon>insert_link</mat-icon><span>{{userProfile?.blog}}</span></div>
+          <div class="icon-text-container"><mat-icon>home</mat-icon><span>{{userProfile?.location}}</span></div>
         </div>
+      </div>
+      <div class="container_col">
+        <div class="profile-stats">
+          <div>
+            <h3>{{userProfile?.public_repos}}</h3>
+            <p>Repos</p>
+          </div>
+          <div>
+            <h3>{{userProfile?.followers}}</h3>
+            <p>Followers</p>
+          </div>
+          <div>
+            <h3>{{userProfile?.following}}</h3>
+            <p>Following</p>
+          </div>
+        </div>
+
         <div class="profile-bio">
-        <h4>Biography</h4>
-        <p>{{userProfile?.bio}}</p>
+          <h4>Biography</h4>
+          <p>{{userProfile?.bio}}</p>
         </div>
+        <p class="profile-join-date">Joined on {{userProfile?.created_at}}{{userProfile?.created_at?.toDateString}}</p>
+      </div>
     </div>
-    <p class="profile-join-date">Joined on {{userProfile?.created_at}}{{userProfile?.created_at?.toDateString}}</p>
-  </div>
+</div>

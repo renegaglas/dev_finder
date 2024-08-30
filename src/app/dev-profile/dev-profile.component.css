@@ -1,16 +1,27 @@
 
 
-  .profile-card {
-    background-color: #1b263b;
-    border-radius: 15px;
-    padding: 2rem;
-    max-width: 400px;
-  }
+.profile-card {
+  flex-grow: 1;
+  background-color: #1b263b;
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  vertical-align: baseline;
+  align-items: center
+}
+.profile-card mat-icon{
+  margin: 0.3rem;
+}
+
 
   .profile-header {
     display: flex;
+    flex-direction: column;
+
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+
     gap: 1rem;
-    margin-bottom: 1rem;
   }
 
   .profile-image {
@@ -32,11 +43,11 @@
   .profile-stats {
     display: flex;
     justify-content: space-between;
-    margin: 1.5rem 0;
   }
 
   .profile-stats div {
     text-align: center;
+    margin: 0 1.5rem;
   }
 
   .profile-bio h4 {
@@ -48,7 +59,14 @@
   }
 
   .profile-join-date {
-    margin-top: 2rem;
+    align-self: flex-end;
+    margin-top: auto;
+    margin-left: auto;
     font-size: 0.9rem;
     color: #828a94;
   }
+
+  .icon-text-container {
+    display: flex;
+    align-items: center; /* Vertically centers both the icon and text */
+}
